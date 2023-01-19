@@ -1,0 +1,15 @@
+ul{
+    margin: 10% 35% auto;
+    padding: 2rem;
+    border: 0.2rem solid black;
+    background-color: aliceblue;
+    border-radius: 2rem;
+}
+
+li a{
+    color: green;
+}
+
+body{
+    background: white url('images/background.jpg') no-repeat;
+}

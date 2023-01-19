@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {%load static%}
+    <link rel="stylesheet" href="{%static 'polls/style.css'%}">
     <title>Polls</title>
 </head>
 <body>
     {% if latest_questions %}
         <ul>
         {% for question in latest_questions %}
-            <li><a href="{%url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+            <li><a href="{%url 'polls:detail' question.id %}">{{ question.question_text }}</a> <strong>{{question.pub_date}}</strong> </li> 
         {% endfor %}
         </ul>
     {% else %}

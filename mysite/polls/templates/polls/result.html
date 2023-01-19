@@ -16,5 +16,7 @@
     </ul>
 
 <a href="{% url 'polls:detail' question.id %}">Vote again?</a>
+<br>
+<a href="{% url 'polls:results.json' question.id %}">Get JSON</a>
 </body>
 </html>
